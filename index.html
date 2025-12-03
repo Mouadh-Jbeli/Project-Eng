@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWorld</title>
+    <!-- Lien avec la feuille de style externe -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien avec le script JavaScript -->
+    <script src="script.js"></script>
+</head>
+<style>
+    /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+</style>
+
+<!-- Lors du chargement de la page, la fonction afficherDate() s’exécute -->
+<body onload="afficherDate()">
+
+    <!-- En-tête de la page -->
+    <header>
+        <h1>🌍TravelWorld</h1>
+        <h2>Your passport to adventure</h2>
+    </header>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li><a href="home.html" target="aff">Home</a></li>
+            <li><a href="connexion.html" target="aff">Sign In</a></li>
+            <li><a href="contact.html" target="aff">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Zone principale avec un iframe -->
+    <section>
+        <!-- L’iframe charge les pages internes sans recharger le site -->
+        <iframe src="home.html" frameborder="0" name="aff"></iframe>
+    </section>
+
+    <!-- Panneau latéral avec une vidéo publicitaire -->
+    <aside>
+        <h3>🎬 Advertiser</h3>
+        
+        <!-- Balisé vidéo avec lecture automatique, muette et contrôles -->
+         
+        <video src="Donnez vie à vos souvenirs de voyage avec le montage vidéo ! - BougaProd (720p, h264).mp4" controls autoplay muted></video>
+
+        <div id="desc" style="background-color: #0083b0;">
+            <h3>🌴Explore paradise destinations</h3>
+            <p >
+                Traveling is one of the most valuable experiences you can give yourself because it expands your understanding of the world in ways no book or classroom ever could. By discovering new cultures, traditions, and ways of thinking, you become more open-minded and appreciative of diversity. It also pushes you out of your comfort zone, teaching you to adapt, communicate, and solve unexpected problems — skills that build confidence and independence. Beyond personal growth, traveling offers moments of relaxation and inspiration, helping you disconnect from daily stress and create unforgettable memories. Every journey, whether through historic streets, natural landscapes, or new flavors, adds something meaningful to your life and shapes you into a more curious and understanding person.
+            </p>
+        </div>
+
+        <!-- Boutons pour contrôler la vidéo (exploitable en JS) -->
+        <input type="button" value="▶Play" onclick="document.querySelector('video').play()">
+        <input type="button" value="⏸Pause" onclick="document.querySelector('video').pause()">
+    </aside>
+
+    <!-- Pied de page : affichera la date générée par le script -->
+    <footer>
+        <p style="float: left;
+        margin: 10px;
+        font-weight: bold;">Created BY: Balssem Touihri - Ritej Mrad
+        
+            
+        </p>
+        <span id="dateFooter"></span>
+    </footer>
+
+</body>
+</html>
